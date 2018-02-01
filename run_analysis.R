@@ -52,7 +52,7 @@ activity <- read.table("./activity_labels.txt")
 activity[, 2] <- tolower(gsub("_", "", activity[, 2]))#gsub:replace function 
 substr(activity[2, 2], 8, 8) <- toupper(substr(activity[2, 2], 8, 8))
 substr(activity[3, 2], 8, 8) <- toupper(substr(activity[3, 2], 8, 8))
-activityLabel <- activity[joinLabel[, 1], 2]
+activityLabel <- activity[joinLabel[, 1], 2] # The function joinLabel cannot be performed. You should use other function to join them
 mergeLabel[, 1] <- activityLabel
 names(mergeLabel) <- "activity"
 
